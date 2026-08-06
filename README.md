@@ -1,4 +1,7 @@
 # AI Resume Screener
+Demo- https://ai-resume-screener-sable.vercel.app/
+
+GitHub Repo: https://github.com/Maan-netizen/ai-resume-screener
 
 Full-stack app that matches a resume against a job description using
 TF-IDF + cosine similarity, and highlights matched vs missing skills.
