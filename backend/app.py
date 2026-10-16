@@ -28,7 +28,14 @@ client = MongoClient(MONGO_URI)
 db = client["resume_screener"]
 scans_collection = db["scans"]
 
-
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "AI Resume Screener API is running",
+        "health": "/api/health",
+        "scan": "/api/scan",
+        "history": "/api/history"
+    })
 @app.route("/api/health", methods=["GET"])
 def health():
     return jsonify({"status": "ok"}), 200
